@@ -25,11 +25,9 @@ export class ApiError extends Error {
 // Define a type for the expected API response structure
 interface ApiResponse {
   code: number
-  msg?: string
+  message?: string
   data?: any
-  success?: boolean
   total?: number
-  more?: boolean
 }
 
 // Handle successful responses
@@ -38,8 +36,8 @@ export async function handleAlovaResponse(
 ) {
   const globalToast = useGlobalToast()
   // Extract status code and data from UniApp response
-  const { statusCode, data } = response as UniNamespace.RequestSuccessCallbackResult
-
+  const { data } = response as UniNamespace.RequestSuccessCallbackResult
+  const { code: statusCode } = data as ApiResponse
   // 处理401/403错误（如果不是在handleAlovaResponse中处理的）
   if ((statusCode === 401 || statusCode === 403)) {
     // 如果是未授权错误，清除用户信息并跳转到登录页

@@ -134,10 +134,10 @@ function donate() {
 
 <route lang="json">
 {
-  "name": "about",
+  "name": "me",
   "layout": "tabbar",
   "style": {
-    "navigationBarTitleText": "关于"
+    "navigationBarTitleText": "我的"
   }
 }
 </route>

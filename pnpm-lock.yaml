@@ -128,7 +128,7 @@ importers:
         version: 0.1.4
       '@uni-helper/uni-types':
         specifier: ^1.0.0-alpha.3
-        version: 1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-cloud-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-ui-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
+        version: 1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-cloud-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-ui-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
       '@uni-helper/unocss-preset-uni':
         specifier: ^0.2.9
         version: 0.2.9(@unocss/preset-mini@0.62.3)(@unocss/rule-utils@0.62.3)(@unocss/vite@0.62.3(rollup@4.21.1)(vite@5.2.8(@types/node@20.16.2)(sass@1.78.0)(terser@5.31.6)))(unocss-applet@0.8.2(@unocss/core@0.62.3)(@unocss/preset-mini@0.62.3)(@unocss/preset-uno@0.62.3)(magic-string@0.30.17)(unocss@0.62.3(postcss@8.4.41)(rollup@4.21.1)(vite@5.2.8(@types/node@20.16.2)(sass@1.78.0)(terser@5.31.6))))(unocss@0.62.3(postcss@8.4.41)(rollup@4.21.1)(vite@5.2.8(@types/node@20.16.2)(sass@1.78.0)(terser@5.31.6)))
@@ -171,6 +171,9 @@ importers:
       husky:
         specifier: ^8.0.0
         version: 8.0.3
+      i:
+        specifier: ^0.3.7
+        version: 0.3.7
       lint-staged:
         specifier: ^15.2.9
         version: 15.2.9
@@ -2312,12 +2315,12 @@ packages:
   '@uni-helper/pages-json-schema@0.2.27':
     resolution: {integrity: sha512-oIuOJe9zQyJjjm9loMJBQUtdUDDHD0+z5fHVqpJNVfdr2jQak62vZG7vkyEKIjWSTxwnoiMhnOHlgD9Y+OVH9A==}
 
-  '@uni-helper/uni-app-types@1.0.0-alpha.3':
-    resolution: {integrity: sha512-lhSpVroEUxzre1vzKAckg85CFLUpn6vw9L2FDO1d8cd9JtMstlXkYmIn/Oz8tqzXxQ1sOgd3YcwoQmkXsw+Oxw==}
+  '@uni-helper/uni-app-types@1.0.0-alpha.6':
+    resolution: {integrity: sha512-t9AKDYBmDaz4IW0fgtBt25ubEzf7kyUeMlHaBaG5nyNGd6pVuDpYkABhsnNPDiZcaHAoN6SbX1SQQx5axDOWbA==}
     engines: {node: '>=14.18'}
     peerDependencies:
-      typescript: ^5.5.4
-      vue: ^3.4.21
+      typescript: ^5.0.0
+      vue: ^3.0.0
 
   '@uni-helper/uni-cloud-types@1.0.0-alpha.3':
     resolution: {integrity: sha512-rFyWXR2C3XQ59MzLvhSFBV0jFzY6NvZ7KKxTsOB1eVkt9VBFXiCHGr3tE8X5yG9ZslUdye1W+whZ25d8RhmQTQ==}
@@ -4402,6 +4405,10 @@ packages:
     resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
+
+  i@0.3.7:
+    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
+    engines: {node: '>=0.4'}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -9940,7 +9947,7 @@ snapshots:
 
   '@uni-helper/pages-json-schema@0.2.27': {}
 
-  '@uni-helper/uni-app-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))':
+  '@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))':
     dependencies:
       typescript: 5.5.4
       vue: 3.4.38(typescript@5.5.4)
@@ -9954,17 +9961,17 @@ snapshots:
     dependencies:
       std-env: 3.7.0
 
-  '@uni-helper/uni-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-cloud-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-ui-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))':
+  '@uni-helper/uni-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-cloud-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(@uni-helper/uni-ui-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))':
     dependencies:
-      '@uni-helper/uni-app-types': 1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
+      '@uni-helper/uni-app-types': 1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
       '@uni-helper/uni-cloud-types': 1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
-      '@uni-helper/uni-ui-types': 1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
+      '@uni-helper/uni-ui-types': 1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
       typescript: 5.5.4
       vue: 3.4.38(typescript@5.5.4)
 
-  '@uni-helper/uni-ui-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))':
+  '@uni-helper/uni-ui-types@1.0.0-alpha.3(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))':
     dependencies:
-      '@uni-helper/uni-app-types': 1.0.0-alpha.3(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
+      '@uni-helper/uni-app-types': 1.0.0-alpha.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
       typescript: 5.5.4
       vue: 3.4.38(typescript@5.5.4)
 
@@ -12396,6 +12403,8 @@ snapshots:
   human-signals@5.0.0: {}
 
   husky@8.0.3: {}
+
+  i@0.3.7: {}
 
   iconv-lite@0.4.24:
     dependencies:

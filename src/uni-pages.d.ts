@@ -5,13 +5,10 @@
 
 interface NavigateToOptions {
   url: "/pages/index/index" |
-       "/pages/about/index" |
-       "/pages/ci/index" |
-       "/pages/create-uni/index" |
-       "/pages/feedback/index" |
-       "/pages/icon/index" |
-       "/pages/pinia/index" |
-       "/pages/request/index" |
+       "/pages/article/detail" |
+       "/pages/article/index" |
+       "/pages/dashboard/index" |
+       "/pages/me/index" |
        "/pages/router/demo-aftereach" |
        "/pages/router/demo-guard" |
        "/pages/router/demo-object" |
@@ -19,13 +16,12 @@ interface NavigateToOptions {
        "/pages/router/demo-protected" |
        "/pages/router/demo-query" |
        "/pages/router/demo-string" |
-       "/pages/router/index" |
-       "/subPages/styles/index";
+       "/pages/router/index";
 }
 interface RedirectToOptions extends NavigateToOptions {}
 
 interface SwitchTabOptions {
-  url: "/pages/index/index" | "/pages/about/index"
+  url: "/pages/index/index" | "/pages/me/index" | "/pages/article/index" | "/pages/dashboard/index"
 }
 
 type ReLaunchOptions = NavigateToOptions | SwitchTabOptions;

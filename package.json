@@ -107,6 +107,7 @@
     "eslint": "^9.9.1",
     "git-cz": "^4.9.0",
     "husky": "^8.0.0",
+    "i": "^0.3.7",
     "lint-staged": "^15.2.9",
     "miniprogram-api-typings": "^3.12.3",
     "sass": "1.78.0",

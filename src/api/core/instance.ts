@@ -9,16 +9,19 @@
 import { createAlova } from 'alova'
 import vueHook from 'alova/vue'
 import AdapterUniapp from '@alova/adapter-uniapp'
-import mockAdapter from '../mock/mockAdapter'
 import { handleAlovaError, handleAlovaResponse } from './handlers'
 
 export const alovaInstance = createAlova({
   baseURL: import.meta.env.VITE_API_BASE_URL || 'https://petstore3.swagger.io/api/v3',
-  ...AdapterUniapp({
-    mockRequest: mockAdapter,
-  }),
+  ...AdapterUniapp(),
   statesHook: vueHook,
   beforeRequest: (method) => {
+    // Authorization header
+    const { token } = useUserInfo()
+    if (token.value) {
+      method.config.headers.Authorization = `Bearer ${token.value}`
+    }
+
     // Add content type for POST/PUT/PATCH requests
     if (['POST', 'PUT', 'PATCH'].includes(method.type)) {
       method.config.headers['Content-Type'] = 'application/json'
@@ -33,7 +36,7 @@ export const alovaInstance = createAlova({
     if (import.meta.env.MODE === 'development') {
       console.log(`[Alova Request] ${method.type} ${method.url}`, method.data || method.config.params)
       console.log(`[API Base URL] ${import.meta.env.VITE_API_BASE_URL}`)
-      console.log(`[Environment] ${import.meta.env.VITE_ENV_NAME}`)
+      console.log(`[Environment] ${import.meta.env.VITE_ENV}`)
     }
   },
 

@@ -10,60 +10,38 @@
       }
     },
     {
-      "path": "pages/about/index",
+      "path": "pages/article/detail",
       "type": "page",
-      "name": "about",
+      "name": "article-detail",
+      "style": {
+        "navigationBarTitleText": "文章详情"
+      }
+    },
+    {
+      "path": "pages/article/index",
+      "type": "page",
+      "name": "article",
       "layout": "tabbar",
       "style": {
-        "navigationBarTitleText": "关于"
+        "navigationBarTitleText": "绿洲"
       }
     },
     {
-      "path": "pages/ci/index",
+      "path": "pages/dashboard/index",
       "type": "page",
-      "name": "ci",
+      "name": "dashboard",
+      "layout": "tabbar",
       "style": {
-        "navigationBarTitleText": "CI 持续集成"
+        "navigationBarTitleText": "数据"
       }
     },
     {
-      "path": "pages/create-uni/index",
+      "path": "pages/me/index",
       "type": "page",
-      "name": "create-uni",
+      "name": "me",
+      "layout": "tabbar",
       "style": {
-        "navigationBarTitleText": "CreateUni 脚手架"
-      }
-    },
-    {
-      "path": "pages/feedback/index",
-      "type": "page",
-      "name": "feedback",
-      "style": {
-        "navigationBarTitleText": "全局反馈"
-      }
-    },
-    {
-      "path": "pages/icon/index",
-      "type": "page",
-      "name": "icon",
-      "style": {
-        "navigationBarTitleText": "图标演示"
-      }
-    },
-    {
-      "path": "pages/pinia/index",
-      "type": "page",
-      "name": "pinia",
-      "style": {
-        "navigationBarTitleText": "Pinia 演示"
-      }
-    },
-    {
-      "path": "pages/request/index",
-      "type": "page",
-      "name": "request",
-      "style": {
-        "navigationBarTitleText": "网络请求"
+        "navigationBarTitleText": "我的"
       }
     },
     {
@@ -158,23 +136,15 @@
         "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/about/index"
+        "pagePath": "pages/me/index"
+      },
+      {
+        "pagePath": "pages/article/index"
+      },
+      {
+        "pagePath": "pages/dashboard/index"
       }
     ]
   },
-  "subPackages": [
-    {
-      "root": "subPages",
-      "pages": [
-        {
-          "path": "styles/index",
-          "type": "page",
-          "name": "styles",
-          "style": {
-            "navigationBarTitleText": "UnoCSS 演示"
-          }
-        }
-      ]
-    }
-  ]
+  "subPackages": []
 }
